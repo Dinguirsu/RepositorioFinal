@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link ref="../public/stylesheets/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div className="maincito">
+            <form className="formcito" action="/subido" enctype="multipart/form-data" method="POST">   
+
+                <input className="inputcito" type="text" placeholder="Nombre de la Foto" autocomplete="off" onpaste="return false" />
+                
+                <input className="inputcito" type="text" placeholder="Descripcion" autocomplete="off" onpaste="return false"/>
+              
+                <input type="file" name="imagen"className="inputcito" />    
+           
+
+                <button  id="boton" className="botoncito" id="boton" type="submit">Subir Foto</button>
+
+            </form>
+         </div>
+</body>
+</html>
