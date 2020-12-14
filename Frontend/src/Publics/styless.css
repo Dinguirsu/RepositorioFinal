@@ -1,0 +1,119 @@
+.navcito{
+    background-color: white;
+    padding: 20px 20px 20px 20px;
+}
+
+.ul{
+    display: inline;
+    margin: 20px 20px  20px;
+    text-align: right; /*alineado a la derecha*/
+    list-style: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.list{
+    width: 100%;
+    display: inline;
+}
+
+.trans:hover{
+    color: black;
+    cursor: pointer;
+}
+
+.a{
+    text-decoration: none;
+    padding: 20px 16px;
+    margin: 20px 0px 30px;
+    color: black;
+}
+
+.OnRight{
+    float: right;
+    list-style: none;
+}
+
+.OnLeft{
+    float: left;
+}
+
+#cambios:hover{
+    transition: background-color 0.5s ease,color 0.5s ease-in;
+    color: green;
+    cursor: pointer;
+}
+
+/*---------------------------------------Fondo------------------------------------------------------*/
+.maincito{
+    background-image: url("../Publics/img/arbolitos.jpg");
+    background-color: purple;
+    background-size: 100%;
+    padding-bottom: 25%;
+    display: flex;
+}
+/*---------------------------------------------------Formulario De Inicio de Sesion y Registro--------------------------------------------------------------*/
+.formcito{
+    
+    width: 30%;
+    margin:auto;
+    background: #f8f8ff;
+    padding: 10px 20px;
+    bottom: 60px; 
+    box-sizing:border-box;
+    border-radius:7px;
+    margin-top:4em;
+    margin-bottom:100px;
+}
+
+.inputcito{
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    
+}
+ .botoncito{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+    border-radius: 10px;
+ }
+
+ 
+
+ #boton{
+    background: green;
+    color: #fff;
+    padding: 20px;
+}
+
+#boton:hover{
+    cursor: pointer;
+    background-color: #A63C24;
+    transition: background-color 0.5s ease,color 0.5s ease-in;
+}
+
+.envios{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    box-sizing: border-box;
+    border: none;
+}
+
+#envio:hover{
+    transition: background-color 0.5s ease,color 0.5s ease-in;
+    color: green;
+    cursor: pointer;
+}
+/*------------------------------Prueba-------------------------------------------*/
+
+.pruebita{
+   padding: .5rem 12rem; 
+}
