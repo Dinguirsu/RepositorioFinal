@@ -4,35 +4,54 @@ import Axios from 'axios';
 import {Redirect} from 'react-router-dom';
 import '../Publics/styless.css';
     
-class Submit extends Component {
+//class Submit extends Component {
 
-    componentDidMount(){
-        Axios.post('http://localhost:3000/subido/')
-        .then(result=>{
-            console.log(result)
-        }).catch(console.log)
-    }
+    //render(){
+const Subir = () => {
 
-    render(){
+        const [form, setForm] = useState({
+            title:'',
+            description:''
+          });
+
+        const onChange = (e)=>{
+            const  {name, value} = e.target;
+            setForm({
+              ...form, //spread Operator 
+              [name] : value,
+            });
+        }
+
+
+        const onSubir = (e)=>{
+            const { title, description} = form;
+            Axios.post('routes/index/subido',
+            {title, description}
+            ).then(result=>{
+                console.log(result)
+            }).catch((err)=>{
+                console.log(err);
+            })
+        }
         
         return( 
         
-       <div className="maincito">
-            <form className="formcito" action="/" enctype="multipart/form-data" method="POST">   
+            <div className="maincito">
+                <form className="formcito" action="/" enctype="multipart/form-data" method="POST">   
 
-                <input className="inputcito" type="text" placeholder="Nombre de la Foto" autocomplete="off" onpaste="return false" />
+                    <input className="inputcito" type="text" placeholder="Nombre de la Foto" autocomplete="off" onpaste="return false" value={form.title} onChange={onChange}/>
+                    
+                    <input className="inputcito" type="text" placeholder="Descripcion" autocomplete="off" onpaste="return false" value={form.description} onChange={onChange}/>
                 
-                <input className="inputcito" type="text" placeholder="Descripcion" autocomplete="off" onpaste="return false"/>
-              
-                <input type="file" name="imagen"className="inputcito" />    
-           
+                    <input type="file" name="imagen"className="inputcito" />    
+            
 
-                <button  onclick='componentDidMount'  id="boton" className="botoncito" id="boton" type="submit">Subir Foto</button>
+                    <button  onclick={onSubir}  id="boton" className="botoncito" id="boton" type="submit">Subir Foto</button>
 
-            </form>
-         </div>
+                </form>
+            </div>
         )
-    }
     
-} 
-export default Submit;
+    
+}
+export default Subir;
