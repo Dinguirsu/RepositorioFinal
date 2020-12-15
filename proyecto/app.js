@@ -13,7 +13,7 @@ require('./database/database')
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
+app.set('view engine', 'hbs', 'html');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -23,6 +23,7 @@ app.use(lessMiddleware(path.join(__dirname, 'public')));
 app.use("/public",express.static(path.join(__dirname, 'public')));
 app.use("/Imagenes",express.static(path.join(__dirname, 'Imagenes')));
 app.use("/buscar",express.static(path.join(__dirname, 'buscar')));
+app.use("/views",express.static(path.join(__dirname, 'views')));
 //app.use(express.static(path.join(__dirname, 'Imagenes/Subidas')));
 app.use(lessMiddleware(path.join(__dirname, 'Imagenes')));
 

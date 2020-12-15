@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://bootswatch.com/4/simplex/bootstrap.min.css" >
+    <title>Document</title>
+</head>
+<body>
+    <div className="app container">
+        <div className="jumbotron">
+            <p className="lead text-center">GALERIA DE IMAGENES</p>
+                <form>
+                    <div className="row">
+                        <div className="form-group col-md-8">
+                            <input type="text" className="form-control form-control-lg" 
+                            placeholder="Busca tu Imagen Puedes buscar como: Perros , Futbol , etc" />
+                        </div>
+                        <div className="form-group col-md-4">
+                            <input type="submit" className=" btn btn-lg btn-danger btn-block" value="BUSCAR" />
+                        </div>
+                    </div>
+                </form>
+        </div>
+    </div>
+       
+    <div>
+        {{#each buscar}}
+            <img src="{{path}}"/>
+        {{/each}}    
+    </div>
+</body>
+</html>

@@ -33,7 +33,7 @@ router.get('/buscar/:filename', async(req, res)=>{
     console.log(filename);
     const buscar = await imagen.find( {filename : filename} );
     
-    res.render('buscar', {buscar});
+    res.render('buscar2', {buscar});
   } catch (ex) {
     console.log(ex);
     res.status(500).json({ "msg": "Algo Malir Sal." });
